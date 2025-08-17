@@ -29,7 +29,7 @@ export class EC2Stack extends cdk.Stack {
             cdk.Tags.of(instance1).add('Name', 'MyPrivateEC2-AZ1' )
     //EC2 Instance 2 in AZ 2
 
-            const instance2 = new ec2.Instance(this, 'MyPrivateEC2-AZ1', {
+            const instance2 = new ec2.Instance(this, 'MyPrivateEC2-AZ2', {
                 vpc: props.vpc,
                 vpcSubnets: {
                     subnetType: ec2.SubnetType.PRIVATE_ISOLATED,
